@@ -1,14 +1,28 @@
 const filme = [];
 
-const listaDeId = ["tt1285016", "tt4154796"];
+const listaDeId = [
+  "tt1707386",
+  "tt0166813",
+  "tt0120794",
+  "tt0120855",
+  "tt4479380",
+  "tt4154796",
+  "tt2361509",
+  "tt0203009",
+  "tt3783958",
+  "tt1285016",
+  "tt0289879",
+  "tt2096673",
+];
 
 function inserirFilmeNaPagina(filme) {
   const divFilme = `
-    <div>
-    <h1 class="titulo-filme">${filme.titulo}</h1>
+    <div class="div-filme">
+    <h2 class="titulo-filme">${filme.titulo}</h2>
     <img class="poster-filme" src=${filme.poster}>
-    <p class="duracao-filme">Duração: ${filme.duracao}</p>
-    <p class="classificacao-filme">Classificação: ${filme.classificacao}</p>
+    <p class="duracao-filme"><b>Duração:</b> ${filme.duracao}</p>
+    <p class="genero-filme"><b>Gênero:</b> ${filme.genero}</p>
+    <p class="classificacao-filme"><b>Classificação:</b> ${filme.classificacao}</p>
     </div>
   `;
 
@@ -23,7 +37,8 @@ function buscarFilme(id) {
         result.Title,
         result.Poster,
         result.Rated,
-        result.Runtime
+        result.Runtime,
+        result.Genre
       );
 
       inserirFilmeNaPagina(novoFilme);
@@ -31,6 +46,8 @@ function buscarFilme(id) {
   });
 }
 
-for (let i = 0; i < listaDeId.length; i++) {
-  buscarFilme(listaDeId[i]);
-}
+$(function () {
+  listaDeId.forEach(function (id) {
+    buscarFilme(id);
+  });
+});

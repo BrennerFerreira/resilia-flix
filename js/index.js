@@ -1,5 +1,3 @@
-const filme = [];
-
 const listaDeId = [
   "tt1707386",
   "tt0166813",
@@ -16,7 +14,7 @@ const listaDeId = [
 ];
 
 function inserirFilmeNaPagina(filme) {
-  const divFilme = `
+  const divFilme = $(`
     <div class="div-filme">
     <h2 class="titulo-filme">${filme.titulo}</h2>
     <img class="poster-filme" src=${filme.poster}>
@@ -24,7 +22,20 @@ function inserirFilmeNaPagina(filme) {
     <p class="genero-filme"><b>Gênero:</b> ${filme.genero}</p>
     <p class="classificacao-filme"><b>Classificação:</b> ${filme.classificacao}</p>
     </div>
-  `;
+  `);
+
+  $(divFilme).click(function () {
+    $("#modal-titulo").text(filme.titulo);
+    $("#modal-poster").attr("src", filme.poster);
+    $("#modal-duracao").html(`<b>Duração:</b> ${filme.duracao}</p>`);
+    $("#modal-genero").html(`<b>Gênero:</b> ${filme.genero}</p>`);
+    $("#modal-classificacao").html(
+      `<b>Classificação:</b> ${filme.classificacao}</p>`
+    );
+    $("#modal-plot").html(filme.plot);
+
+    $("#filme-detalhes").modal("show");
+  });
 
   $("#filmes").append(divFilme);
 }
@@ -38,7 +49,8 @@ function buscarFilme(id) {
         result.Poster,
         result.Rated,
         result.Runtime,
-        result.Genre
+        result.Genre,
+        result.Plot
       );
 
       inserirFilmeNaPagina(novoFilme);

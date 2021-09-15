@@ -7,13 +7,31 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="./css/style.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resilia Flix</title>
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between" >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">ResiliaFlix</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Entrar</a>
+                <a class="nav-link" href="#">Cadastre-se</a>
+                <a class="nav-link" href="#">Encontre um filme!</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+  </header>
     <div class="container">
-      <div id="filmes"></div>
+      <div class="d-flex flex-wrap my-5" id="filmes"></div>
 
       <div class="modal" id="filme-detalhes">
         <div class="modal-dialog">
@@ -42,7 +60,11 @@
         </div>
       </div>
     </div>
-
+    <footer>
+      <div class="text-center p-4 bg-dark text-light" id="footer">
+        ResiliaFlix - Grupo 4 - <a href="./contato.html"> Contato</a>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

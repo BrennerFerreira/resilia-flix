@@ -15,7 +15,7 @@ const listaDeId = [
 
 function inserirFilmeNaPagina(filme) {
   const divFilme = $(`
-    <div class="div-filme">
+    <div class="mx-2 div-filme">
     <h2 class="titulo-filme">${filme.titulo}</h2>
     <img class="poster-filme" src=${filme.poster}>
     <p class="duracao-filme"><b>Duração:</b> ${filme.duracao}</p>

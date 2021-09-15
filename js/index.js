@@ -58,8 +58,10 @@ function buscarFilme(id) {
   });
 }
 
-$(function () {
+function buscarFilmesNaApi() {
   listaDeId.forEach(function (id) {
     buscarFilme(id);
   });
-});
+}
+
+$(buscarFilmesNaApi);

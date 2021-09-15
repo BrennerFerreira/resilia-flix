@@ -15,39 +15,47 @@
   </head>
   <body>
     <header>
-      <nav
-        class="
-          navbar navbar-expand-lg navbar-light
-          bg-light
-          d-flex
-          justify-content-between
-        "
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">ResiliaFlix</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Entrar</a>
-              <a class="nav-link" href="#">Cadastre-se</a>
-              <a class="nav-link" href="#">Encontre um filme!</a>
-            </div>
-          </div>
+      <nav class="navbar navbar-expand-md navbar-light bg-light px-5">
+        <a class="navbar-brand" id="logo" href="./index.html">ResiliaFlix</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./html/busca.html"
+                >Encontre um filme!</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./html/pagina-cadastro.html"
+                >Cadastre-se</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="botao-login"
+                class="nav-link rounded text-light"
+                aria-current="page"
+                href="./html/login.html"
+                >Entrar</a
+              >
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
+
     <div class="container">
-      <div class="d-flex flex-wrap my-5" id="filmes"></div>
+      <main class="d-flex flex-wrap my-5" id="filmes"></main>
 
       <div class="modal" id="filme-detalhes">
         <div class="modal-dialog">
@@ -76,9 +84,10 @@
         </div>
       </div>
     </div>
+
     <footer>
-      <div class="text-center p-4 bg-dark text-light" id="footer">
-        ResiliaFlix - Grupo 4 - <a href="./contato.html"> Contato</a>
+      <div class="text-center p-4 bg-light text-dark" id="footer">
+        ResiliaFlix - Grupo 4 - <a href="./html/contato.html">Contato</a>
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

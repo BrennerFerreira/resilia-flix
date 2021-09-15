@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/login.css">
     <title>Entrar</title>
   </head>
   <body>
@@ -57,7 +58,27 @@
       </nav>
     </header>
 
-    <main class="container"></main>
+    <main class="container">
+
+      <form class="column g-3 offset-md-4">
+        <div class="mb-3">
+          <h4>Faça seu login</h4>
+        </div>
+
+        <div class="my-2 col-md-6">
+          <label for="name" class="form-label">Email</label>
+          <input type="name" class="form-control" id="inputname">
+        </div>
+        <div class="mb-2 col-md-2">
+          <label for="inputPassword4" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="my-4 col-12">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <a href="senha.html">Esqueci minha senha</a>
+        </div>
+      </form>
+    </main>
 
     <footer>
       <div class="text-center p-4 bg-light text-dark" id="footer">

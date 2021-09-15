@@ -39,5 +39,7 @@ body {
 }
 
 #logo {
-  color: blueviolet;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: blueviolet;
 }

@@ -59,7 +59,7 @@
     </header>
 
     <main class="container">
-      <form class="column g-3 offset-md-4">
+      <form id="form" class="column g-3 offset-md-4">
         <div class="mb-3">
           <h4>Faça seu login</h4>
         </div>
@@ -67,6 +67,7 @@
         <div class="my-2 col-md-6">
           <label for="name" class="form-label">Email</label>
           <input type="name" class="form-control" id="inputname" />
+          <div id="erro"></div>
         </div>
         <div class="mb-2 col-md-2">
           <label for="inputPassword4" class="form-label">Senha</label>
@@ -74,8 +75,8 @@
         </div>
         <div class="my-4 col-12">
           <button type="submit" class="btn btn-primary">Enviar</button>
-          <a href="senha.html">Esqueci minha senha</a>
         </div>
+        <a href="./senha.html">Esqueci minha senha</a>
       </form>
     </main>
 
@@ -91,5 +92,6 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/email.js"></script>
   </body>
 </html>

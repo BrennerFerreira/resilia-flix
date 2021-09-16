@@ -12,7 +12,25 @@ $("#inputZip").keyup(function (event) {
   if ($(this).val().length == 8) {
     buscarEndereco($(this).val().substring(0, 8));
   }
+
+  if ($(this).val().length < 8) {
+    limparEndereco();
+  }
 });
+
+$("#inputZip").on("input", function () {
+  if ($(this).val().length > 8) {
+    $(this).val($(this).val().slice(0, 8));
+  }
+});
+
+function limparEndereco() {
+  $("#inputRua").val("");
+  $("#inputComplemento").val("");
+  $("#inputBairro").val("");
+  $("#inputCity").val("");
+  $("#inputState").val("");
+}
 
 function mostrarEndereco(endereco) {
   $("#inputRua").val(endereco.logradouro);
@@ -27,6 +45,7 @@ function buscarEndereco(cep) {
     url: `https://viacep.com.br/ws/${cep}/json/`,
     success: function (result) {
       if (result["erro"]) {
+        limparEndereco();
         alert("CEP inválido!");
         return;
       }

@@ -13,13 +13,10 @@ const listaDeId = [
   "tt2096673",
 ];
 
-function inserirFilmeNaPagina(filme) {
-  const divFilme = $(`
-    <div class="mx-2 div-filme">
-    <h2 class="titulo-filme">${filme.titulo}</h2>
-    <img class="poster-filme" src=${filme.poster}>
-    </div>
-  `);
+function inserirFilmeNaPagina(filme, index) {
+  const divFilme = $(`#filme${index}`);
+
+  divFilme.attr("src", filme.poster);
 
   $(divFilme).click(function () {
     $("#modal-titulo").text(filme.titulo);
@@ -37,7 +34,7 @@ function inserirFilmeNaPagina(filme) {
   $("#filmes").append(divFilme);
 }
 
-function buscarFilme(id) {
+function buscarFilme(id, index) {
   $.ajax({
     url: `http://www.omdbapi.com/?apikey=da8a6c76&i=${id}`,
     success: function (result) {
@@ -50,14 +47,14 @@ function buscarFilme(id) {
         result.Plot
       );
 
-      inserirFilmeNaPagina(novoFilme);
+      inserirFilmeNaPagina(novoFilme, index);
     },
   });
 }
 
 function buscarFilmesNaApi() {
-  listaDeId.forEach(function (id) {
-    buscarFilme(id);
+  listaDeId.forEach(function (id, index) {
+    buscarFilme(id, index);
   });
 }
 

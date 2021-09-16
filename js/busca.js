@@ -10,7 +10,7 @@ function inserirFilmeNaPagina(filme) {
   const divFilme = $(`
       <div class="text-center div-filme" id="filmeBuscado">
       <h2 class="titulo-filme">${filme.titulo}</h2>
-      <img class="poster-filme" src=${filme.poster}>
+      <img class="poster-filme img-filme" src=${filme.poster}>
       </div>
     `);
 

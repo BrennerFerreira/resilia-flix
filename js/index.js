@@ -37,7 +37,7 @@ function inserirFilmeNaPagina(filme, index) {
 
 function buscarFilme(id, index) {
   jQuery.ajax({
-    url: `http://www.omdbapi.com/?apikey=da8a6c76&i=${id}`,
+    url: `https://www.omdbapi.com/?apikey=da8a6c76&i=${id}`,
     success: function (result) {
       const novoFilme = new Filme(
         result.Title,

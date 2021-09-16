@@ -1,3 +1,11 @@
 .modal-content {
   color: black;
 }
+
+#carrossel-filmes {
+  display: none;
+}
+
+#footer {
+  position: absolute;
+}

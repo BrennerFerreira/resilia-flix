@@ -32,10 +32,11 @@ function inserirFilmeNaPagina(filme, index) {
   });
 
   $("#filmes").append(divFilme);
+  $("#carrossel-filmes").css("display", "block");
 }
 
 function buscarFilme(id, index) {
-  $.ajax({
+  jQuery.ajax({
     url: `http://www.omdbapi.com/?apikey=da8a6c76&i=${id}`,
     success: function (result) {
       const novoFilme = new Filme(

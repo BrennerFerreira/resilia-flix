@@ -5,7 +5,7 @@ function validarEmail(email) {
 }
 
 const erroDiv = $("#erro");
-const emailDiv = $("#inputname");
+const emailDiv = $("#email");
 
 function validar() {
   erroDiv.text("");
@@ -27,7 +27,20 @@ $("#form").keyup(function () {
 $("#form").submit(function (event) {
   event.preventDefault();
   if (validar()) {
-    alert("Login bem-sucedido.");
+    const paginaAtual = window.location.pathname;
+    switch (paginaAtual) {
+      case "/html/senha.html":
+        alert(
+          "Uma mensagem com instruções foi enviado para o e-mail informado."
+        );
+        break;
+      case "/html/pagina-cadastro.html":
+        alert("Conta criada com sucesso.");
+        break;
+      default:
+        alert("Login bem-sucedido.");
+        break;
+    }
     window.location.href = "../index.html";
   }
 });

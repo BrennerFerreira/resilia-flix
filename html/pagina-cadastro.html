@@ -54,7 +54,7 @@
     </header>
 
     <main class="container">
-      <form class="column g-3">
+      <form id="form" class="column g-3">
         <div class="my-2 col-md-6">
           <label for="name" class="form-label">Nome Completo</label>
           <input type="name" class="form-control" id="inputname" />
@@ -66,6 +66,7 @@
         <div class="mb-2 col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
           <input type="email" class="form-control" id="inputEmail4" />
+          <div id="erro"></div>
         </div>
         <div class="mb-2 col-md-2">
           <label for="inputPassword" class="form-label">Senha</label>
@@ -147,12 +148,13 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/cadastro.js"></script>
-    <script src="../js/models/endereco.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/models/endereco.js"></script>
+    <script src="../js/cadastro.js"></script>
+    <script src="../js/email.js"></script>
   </body>
 </html>

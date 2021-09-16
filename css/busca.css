@@ -6,3 +6,7 @@ position:absolute;
 width: 60%;
 margin-top: 10%;
 }
+
+.modal-content {
+    color: black;
+  }

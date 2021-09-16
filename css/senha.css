@@ -1,0 +1,14 @@
+.container {
+width: 60%;
+margin-top: 10%;
+height: 100vh;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+#footer {
+    position: absolute;
+    }
+

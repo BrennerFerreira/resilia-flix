@@ -1,14 +1,13 @@
 .container {
-width: 60%;
-margin-top: 10%;
-height: 100vh;
+  width: 60%;
+  margin-top: 10%;
+  height: 100vh;
 }
 
 h4 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #footer {
-    position: absolute;
-    }
-
+  position: absolute;
+}

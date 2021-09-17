@@ -39,7 +39,11 @@ body {
 }
 
 #logo {
-    text-transform: uppercase;
-    font-weight: bolder;
-    color: blueviolet;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: blueviolet;
+}
+
+.img-filme:hover {
+  cursor: pointer;
 }

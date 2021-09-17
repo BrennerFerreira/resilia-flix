@@ -14,9 +14,25 @@ const listaDeId = [
 ];
 
 function inserirFilmeNaPagina(filme, index) {
-  const divFilme = $(`#filme${index}`);
+  const divFilme = $(`
+  <div class="carousel-item ${index === 0 ? "active" : ""}">
+            <div
+              class="
+                d-block
+                w-100
+                d-flex
+                align-items-center
+                justify-content-center
+              "
+            >
+              <img src=${
+                filme.poster
+              } class="d-block w-25 img-filme" id="filme${index}" />
+            </div>
+          </div>
+  `);
 
-  divFilme.attr("src", filme.poster);
+  // divFilme.attr("src", filme.poster);
 
   $(divFilme).click(function () {
     $("#modal-titulo").text(filme.titulo);

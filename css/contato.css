@@ -1,0 +1,26 @@
+.nomePerfil {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  display: flex;
+}
+
+.boxpicture {
+  width: 70%;
+  height: 70%;
+}
+
+.redesSociais {
+  text-align: justify;
+}
+.grupo4 {
+  display: flex;
+  align-items: center;
+  position: center;
+  justify-content: space-evenly;
+}
+
+#footer {
+  position: absolute;
+}

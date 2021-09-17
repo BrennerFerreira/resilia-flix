@@ -31,13 +31,38 @@ function inserirFilmeNaPagina(filme) {
     } else {
         const divFilme = $(`
             <div class="text-center div-filme" id="filmeBuscado">
-            <h2 class="titulo-filme">Nenhum filme encontrado.</h2>
+            <h4 class="titulo-filme">Nenhum filme encontrado.</h4>
             </div> `
         );
         $("#filmes").append(divFilme);
         $("#footer").css({ position: "absolute" });
     }
 
+}
+
+function popularFilme(id, poster) {
+    if(id != null && poster != null){
+        $.ajax({
+            url: "https://www.omdbapi.com/?apikey=da8a6c76&i=" + id,
+            success: function (result) {
+                const novoFilme = new Filme(
+                    result.Title,
+                    poster,
+                    result.Rated,
+                    result.Runtime,
+                    result.Genre,
+                    result.Plot
+                );
+                
+                inserirFilmeNaPagina(novoFilme);
+    
+    
+            },
+        });
+    }else{
+        inserirFilmeNaPagina(null);
+    }
+    
 }
 
 function buscarFilmeTitulo(titulo) {
@@ -54,20 +79,11 @@ function buscarFilmeTitulo(titulo) {
                     } else {
                         poster = imagemIndisponivel;
                     }
-                    const novoFilme = new Filme(
-                        listaFilmes[i].Title,
-                        poster,
-                        listaFilmes[i].Rated,
-                        listaFilmes[i].Runtime,
-                        listaFilmes[i].Genre,
-                        listaFilmes[i].Plot
-                    );
-                    inserirFilmeNaPagina(novoFilme);
+                    popularFilme(listaFilmes[i].imdbID, poster)
                 }
             } else {
-                inserirFilmeNaPagina(null);
+                popularFilme(null, null)
             }
-
         },
     });
 }

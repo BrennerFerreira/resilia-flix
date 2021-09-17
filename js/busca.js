@@ -1,49 +1,73 @@
 $("#button-addon2").on("click", async function (event) {
-  $("#filmeBuscado").remove();
-  let textoBusca = $("#texto-busca").val();
-  buscarFilmeTitulo(textoBusca);
-  $("#footer").css({ position: "relative" });
+    $("#filmes").html("");
+    let textoBusca = $("#texto-busca").val();
+    buscarFilmeTitulo(textoBusca);
+    $("#footer").css({ position: "relative" });
 });
 
 function inserirFilmeNaPagina(filme) {
-  console.log(filme);
-  const divFilme = $(`
-      <div class="text-center div-filme" id="filmeBuscado">
-      <h2 class="titulo-filme">${filme.titulo}</h2>
-      <img class="poster-filme img-filme" src=${filme.poster}>
-      </div>
-    `);
+    if (filme != null) {
+        const divFilme = $(`
+            <div class="text-center div-filme">
+            <h5 class="titulo-filme">${filme.titulo}</h5>
+            <img class="poster-filme" src=${filme.poster}>
+            </div>
+        `);
 
-  $(divFilme).click(function () {
-    $("#modal-titulo").text(filme.titulo);
-    $("#modal-poster").attr("src", filme.poster);
-    $("#modal-duracao").html(`<b>Duração:</b> ${filme.duracao}</p>`);
-    $("#modal-genero").html(`<b>Gênero:</b> ${filme.genero}</p>`);
-    $("#modal-classificacao").html(
-      `<b>Classificação:</b> ${filme.classificacao}</p>`
-    );
-    $("#modal-plot").html(filme.plot);
+        $(divFilme).click(function () {
+            $("#modal-titulo").text(filme.titulo);
+            $("#modal-poster").attr("src", filme.poster);
+            $("#modal-duracao").html(`<b>Duração:</b> ${filme.duracao}</p>`);
+            $("#modal-genero").html(`<b>Gênero:</b> ${filme.genero}</p>`);
+            $("#modal-classificacao").html(
+                `<b>Classificação:</b> ${filme.classificacao}</p>`
+            );
+            $("#modal-plot").html(filme.plot);
 
-    $("#filme-detalhes").modal("show");
-  });
+            $("#filme-detalhes").modal("show");
+        });
 
-  $("#filmes").append(divFilme);
+        $("#filmes").append(divFilme);
+    } else {
+        const divFilme = $(`
+            <div class="text-center div-filme" id="filmeBuscado">
+            <h2 class="titulo-filme">Nenhum filme encontrado.</h2>
+            </div> `
+        );
+        $("#filmes").append(divFilme);
+        $("#footer").css({ position: "absolute" });
+    }
+
 }
 
 function buscarFilmeTitulo(titulo) {
-  $.ajax({
-    url: `https://www.omdbapi.com/?apikey=da8a6c76&t=${titulo}`,
-    success: function (result) {
-      const novoFilme = new Filme(
-        result.Title,
-        result.Poster,
-        result.Rated,
-        result.Runtime,
-        result.Genre,
-        result.Plot
-      );
+    $.ajax({
+        url: `https://www.omdbapi.com/?apikey=da8a6c76&s=${titulo}`,
+        success: function (result) {
+            if (result.Response == "True") {
+                const listaFilmes = result.Search;
+                const imagemIndisponivel = "https://www.bacozon.com/images/produto_indisponivel.png";
+                for (let i = 0; i < listaFilmes.length; i++) {
+                    let poster = "";
+                    if (listaFilmes[i].Poster != "N/A") {
+                        poster = listaFilmes[i].Poster;
+                    } else {
+                        poster = imagemIndisponivel;
+                    }
+                    const novoFilme = new Filme(
+                        listaFilmes[i].Title,
+                        poster,
+                        listaFilmes[i].Rated,
+                        listaFilmes[i].Runtime,
+                        listaFilmes[i].Genre,
+                        listaFilmes[i].Plot
+                    );
+                    inserirFilmeNaPagina(novoFilme);
+                }
+            } else {
+                inserirFilmeNaPagina(null);
+            }
 
-      inserirFilmeNaPagina(novoFilme);
-    },
-  });
+        },
+    });
 }

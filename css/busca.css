@@ -1,12 +1,23 @@
 #footer {
-  position: absolute;
+    position: absolute;
 }
 
 .container {
-  width: 60%;
-  margin-top: 10%;
+    width: 60%;
+    margin-top: 10%;
 }
 
 .modal-content {
-  color: black;
+    color: black;
+}
+
+.div-filme {
+    max-width: 300px;
+    margin: 10px;
+    word-break: normal;
+}
+
+.poster-filme {
+    max-width: 300px;
+    height: auto;
 }

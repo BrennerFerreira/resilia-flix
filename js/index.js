@@ -27,7 +27,7 @@ function inserirFilmeNaPagina(filme, index) {
             >
               <img src=${
                 filme.poster
-              } class="d-block w-25" id="filme${index}" />
+              } class="d-block w-25 img-filme" id="filme${index}" />
             </div>
           </div>
   `);

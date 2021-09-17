@@ -45,3 +45,14 @@ $("#form").submit(function (event) {
     window.location.href = "../index.html";
   }
 });
+
+function redirecionarSeUsuarioLogado() {
+  const usuarioLogado = verificarSeUsuarioEstaLogado();
+
+  if (usuarioLogado) {
+    alert("Você já efetuou o login!");
+    window.location.href = "../index.html";
+  }
+}
+
+$(redirecionarSeUsuarioLogado);

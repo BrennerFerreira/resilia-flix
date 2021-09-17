@@ -75,4 +75,21 @@ function buscarFilmesNaApi() {
   });
 }
 
+function buscarUsuarioLogado() {
+  const emailUsuario = window.sessionStorage.getItem("email");
+
+  if (emailUsuario) {
+    $("#texto-nav").html(`
+      <div>${emailUsuario}</div>
+    `);
+
+    $("#texto-nav").addClass(
+      "d-flex align-items-center justify-content-center px-1 logado"
+    );
+
+    $("#botao-login").text("Sair");
+  }
+}
+
 $(buscarFilmesNaApi);
+$(buscarUsuarioLogado);

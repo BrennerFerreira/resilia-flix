@@ -27,6 +27,7 @@ $("#form").keyup(function () {
 $("#form").submit(function (event) {
   event.preventDefault();
   if (validar()) {
+    fazerLogin(emailDiv.val());
     const paginaAtual = window.location.pathname;
     switch (paginaAtual) {
       case "/html/senha.html":

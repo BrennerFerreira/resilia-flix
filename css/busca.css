@@ -14,7 +14,7 @@
 .div-filme {
     max-width: 300px;
     margin: 10px;
-    word-break: break-all;
+    word-break: normal;
 }
 
 .poster-filme {

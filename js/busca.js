@@ -9,7 +9,7 @@ function inserirFilmeNaPagina(filme) {
     if (filme != null) {
         const divFilme = $(`
             <div class="text-center div-filme">
-            <h2 class="titulo-filme">${filme.titulo}</h2>
+            <h5 class="titulo-filme">${filme.titulo}</h5>
             <img class="poster-filme" src=${filme.poster}>
             </div>
         `);
@@ -28,7 +28,7 @@ function inserirFilmeNaPagina(filme) {
         });
 
         $("#filmes").append(divFilme);
-    }else{
+    } else {
         const divFilme = $(`
             <div class="text-center div-filme" id="filmeBuscado">
             <h2 class="titulo-filme">Nenhum filme encontrado.</h2>
@@ -44,12 +44,19 @@ function buscarFilmeTitulo(titulo) {
     $.ajax({
         url: `https://www.omdbapi.com/?apikey=da8a6c76&s=${titulo}`,
         success: function (result) {
-            if(result.Response == "True"){
+            if (result.Response == "True") {
                 const listaFilmes = result.Search;
-                for(let i=0; i < listaFilmes.length; i++){
+                const imagemIndisponivel = "https://www.bacozon.com/images/produto_indisponivel.png";
+                for (let i = 0; i < listaFilmes.length; i++) {
+                    let poster = "";
+                    if (listaFilmes[i].Poster != "N/A") {
+                        poster = listaFilmes[i].Poster;
+                    } else {
+                        poster = imagemIndisponivel;
+                    }
                     const novoFilme = new Filme(
                         listaFilmes[i].Title,
-                        listaFilmes[i].Poster,
+                        poster,
                         listaFilmes[i].Rated,
                         listaFilmes[i].Runtime,
                         listaFilmes[i].Genre,
@@ -57,10 +64,10 @@ function buscarFilmeTitulo(titulo) {
                     );
                     inserirFilmeNaPagina(novoFilme);
                 }
-            }else{
+            } else {
                 inserirFilmeNaPagina(null);
             }
-            
+
         },
     });
 }

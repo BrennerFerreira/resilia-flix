@@ -29,3 +29,8 @@
 #filmes{
     margin-left: 5%;
 }
+
+#modal-poster{
+    max-width: 300px;
+    height: auto;
+}

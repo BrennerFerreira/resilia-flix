@@ -13,7 +13,7 @@ class BuscaView {
       const divFilme = $(`
             <div class="text-center div-filme">
             <h5 class="titulo-filme">${filme.titulo}</h5>
-            <img class="poster-filme" src=${filme.poster}>
+            <img class="poster-filme img-filme" src=${filme.poster}>
             </div>
         `);
 

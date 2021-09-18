@@ -1,7 +1,5 @@
 class CadastroModel {
   buscarEndereco(cep, callbackSucesso, callbackErro) {
-    console.log("buscar endereco chamado");
-    console.log({ cep, callbackSucesso, callbackErro });
     $.ajax({
       url: `https://viacep.com.br/ws/${cep}/json/`,
       success: function (result) {

@@ -1,5 +1,5 @@
 class IndexView {
-  inserirFilmeNaPagina(filme, index) {
+  inserirFilmeNaPagina = (filme, index) => {
     const divFilme = $(`
         <div class="carousel-item ${index === 0 ? "active" : ""}">
             <div
@@ -22,7 +22,7 @@ class IndexView {
 
     $("#filmes").append(divFilme);
     $("#carrossel-filmes").css("display", "block");
-  }
+  };
 
   _inserirInformacoesDoFilmeNaDiv(filme) {
     $("#modal-titulo").text(filme.titulo);

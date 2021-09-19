@@ -17,135 +17,141 @@
   </head>
 
   <body>
-    <header>
-      <nav class="navbar navbar-expand-md navbar-light bg-light px-5">
-        <a class="navbar-brand" id="logo" href="./index.html">ResiliaFlix</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <div id="div-externa" class="d-flex flex-column h-100">
+      <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light px-5">
+          <a class="navbar-brand" id="logo" href="./index.html">ResiliaFlix</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <ul class="navbar-nav d-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="./html/busca.html"
+                  >Encontre um filme!</a
+                >
+              </li>
+              <li id="texto-nav" class="nav-item">
+                <a class="nav-link" href="./html/pagina-cadastro.html"
+                  >Cadastre-se</a
+                >
+              </li>
+              <li id="botao-nav" class="nav-item">
+                <a
+                  id="botao-login"
+                  class="nav-link rounded text-light"
+                  aria-current="page"
+                  href="./html/login.html"
+                  >Entrar</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <main class="container pt-2 flex-grow-1">
+        <div class="text-center containerDescricao">
+          <h4>Os melhores filmes você encontra aqui!</h4>
+          <h5>
+            Títulos variados para agradar toda a familia e no primeiro mês você
+            não paga nada.
+          </h5>
+          <h5>Assinando por 12 meses ou mais você ganha um super desconto.</h5>
+          <h5>
+            Faça login ou cadastre-se para ter acesso a conteúdos incríveis!
+          </h5>
+        </div>
 
         <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavAltMarkup"
+          id="carrossel-filmes"
+          class="carousel slide"
+          data-bs-ride="carousel"
         >
-          <ul class="navbar-nav d-flex">
-            <li class="nav-item">
-              <a class="nav-link" href="./html/busca.html"
-                >Encontre um filme!</a
-              >
-            </li>
-            <li id="texto-nav" class="nav-item">
-              <a class="nav-link" href="./html/pagina-cadastro.html"
-                >Cadastre-se</a
-              >
-            </li>
-            <li id="botao-nav" class="nav-item">
-              <a
-                id="botao-login"
-                class="nav-link rounded text-light"
-                aria-current="page"
-                href="./html/login.html"
-                >Entrar</a
-              >
-            </li>
-          </ul>
+          <div class="carousel-inner" id="filmes"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carrossel-filmes"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carrossel-filmes"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
         </div>
-      </nav>
-    </header>
 
-    <div class="container pt-2">
-      <div class="text-center containerDescricao">
-        <h4>Os melhores filmes você encontra aqui!</h4>
-        <h5>
-          Títulos variados para agradar toda a familia e no primeiro mês você
-          não paga nada.
-        </h5>
-        <h5>Assinando por 12 meses ou mais você ganha um super desconto.</h5>
-        <h5>
-          Faça login ou cadastre-se para ter acesso a conteúdos incríveis!
-        </h5>
-      </div>
-
-      <div id="carrossel-filmes" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner" id="filmes"></div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carrossel-filmes"
-          data-bs-slide="prev"
+        <div
+          class="modal fade"
+          id="filme-detalhes"
+          tabindex="-1"
+          aria-labelledby="modalDetalhesFilme"
+          aria-hidden="true"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carrossel-filmes"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Próximo</span>
-        </button>
-      </div>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-titulo"></h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Fechar"
+                ></button>
+              </div>
 
-      <div
-        class="modal fade"
-        id="filme-detalhes"
-        tabindex="-1"
-        aria-labelledby="modalDetalhesFilme"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" id="modal-titulo"></h4>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Fechar"
-              ></button>
-            </div>
+              <div
+                class="
+                  modal-body
+                  d-flex
+                  flex-column
+                  align-items-center
+                  justify-content-center
+                "
+              >
+                <img class="h-25 mb-3" id="modal-poster" />
+                <p id="modal-duracao"></p>
+                <p id="modal-genero"></p>
+                <p id="modal-classificacao"></p>
+                <p id="modal-plot"></p>
+              </div>
 
-            <div
-              class="
-                modal-body
-                d-flex
-                flex-column
-                align-items-center
-                justify-content-center
-              "
-            >
-              <img class="h-25 mb-3" id="modal-poster" />
-              <p id="modal-duracao"></p>
-              <p id="modal-genero"></p>
-              <p id="modal-classificacao"></p>
-              <p id="modal-plot"></p>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn" data-bs-dismiss="modal">
-                Fechar
-              </button>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-bs-dismiss="modal">
+                  Fechar
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </main>
 
-    <footer>
-      <div class="text-center p-4 bg-light text-dark" id="footer">
-        ResiliaFlix - Grupo 4 - <a href="./html/contato.html">Contato</a>
-      </div>
-    </footer>
+      <footer>
+        <div class="text-center p-4 bg-light text-dark" id="footer">
+          ResiliaFlix - Grupo 4 - <a href="./html/contato.html">Contato</a>
+        </div>
+      </footer>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script

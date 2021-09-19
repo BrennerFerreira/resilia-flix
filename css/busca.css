@@ -1,36 +1,18 @@
-#footer {
-    position: absolute;
-}
-
-.container {
-    width: 60%;
-    margin-top: 10%;
-}
-
 .modal-content {
-    color: black;
+  color: black;
 }
 
 .div-filme {
-    max-width: 300px;
-    margin: 10px;
-    word-break: normal;
+  max-width: 300px;
+  word-break: normal;
 }
 
 .poster-filme {
-    max-width: 300px;
-    height: auto;
+  max-width: 300px;
+  height: auto;
 }
 
-#filmeBuscado{
-    margin-left: 24%;
-}
-
-#filmes{
-    margin-left: 5%;
-}
-
-#modal-poster{
-    max-width: 300px;
-    height: auto;
+#modal-poster {
+  max-width: 300px;
+  height: auto;
 }

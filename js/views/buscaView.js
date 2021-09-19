@@ -4,14 +4,13 @@ class BuscaView {
       $("#filmes").html("");
       const textoBusca = $("#texto-busca").val();
       buscarFilme(textoBusca);
-      $("#footer").css({ position: "relative" });
     });
   }
 
   inserirFilmeNaPagina(filme) {
     if (filme != null) {
       const divFilme = $(`
-            <div class="text-center div-filme">
+            <div class="d-flex flex-column align-items-center justify-content-center div-filme">
             <h5 class="titulo-filme">${filme.titulo}</h5>
             <img class="poster-filme img-filme" src=${filme.poster}>
             </div>
@@ -37,7 +36,6 @@ class BuscaView {
             <h4 class="titulo-filme">Nenhum filme encontrado.</h4>
             </div> `);
       $("#filmes").append(divFilme);
-      $("#footer").css({ position: "absolute" });
     }
   }
 }

@@ -7,7 +7,7 @@
 
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela+Round&display=swap");
 
 /* #background {
   background-image: url("../imagens/cinema2.jpg");
@@ -17,36 +17,32 @@
 
 .navbar {
   background-color: rgb(225, 207, 242);
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 
-
-.navbar-brand{
-  font-family: 'Bebas Neue', cursive;
+.navbar-brand {
+  font-family: "Bebas Neue", cursive;
   font-size: 35px;
   text-shadow: 2px 4px rgb(0 0 0 / 15%);
   padding-top: 0;
   padding-bottom: 0;
 }
 
-
 .container {
   margin-top: 10%;
   /* margin-top: 10%; */
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   /* background: url("../imagens/cinema2.jpg");
   background-repeat: no-repeat;
   background-size: contain;
    */
 }
-  
 
 /* h4 {
   text-transform: uppercase;
 } */
 
 #footer {
-  position: absolute;
   background-color: rgb(225, 207, 242);
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }

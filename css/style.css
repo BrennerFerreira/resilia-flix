@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela+Round&display=swap");
+
 *,
 *::after,
 *::before {
@@ -9,6 +11,39 @@
 body {
   background-color: black;
   color: white;
+}
+
+.navbar {
+  background-color: rgb(225, 207, 242);
+  font-family: "Varela Round", sans-serif;
+}
+
+.navbar-light .navbar-brand {
+  color: blueviolet;
+  font-family: "Bebas Neue", cursive;
+  font-size: 35px;
+  text-shadow: 2px 4px rgb(0 0 0 / 15%);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+/* .navbar-brand {
+  font-family: "Bebas Neue", cursive;
+  font-size: 35px;
+  text-shadow: 2px 4px rgb(0 0 0 / 15%);
+  padding-top: 0;
+  padding-bottom: 0;
+} */
+
+/* #logo {
+  font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: blueviolet; */
+
+.container {
+  font-family: "Varela Round", sans-serif;
 }
 
 #div-externa {
@@ -32,6 +67,8 @@ body {
 }
 
 #footer {
+  background-color: rgb(225, 207, 242);
+  font-family: "Varela Round", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,19 +77,15 @@ body {
 }
 
 #footer a {
-  color: blueviolet;
   margin-left: 8px;
+  font-family: "Varela Round", sans-serif;
 }
+
 
 #botao-login {
   background-color: blueviolet;
 }
 
-#logo {
-  text-transform: uppercase;
-  font-weight: bolder;
-  color: blueviolet;
-}
 
 .img-filme:hover {
   cursor: pointer;

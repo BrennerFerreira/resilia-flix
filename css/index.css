@@ -1,3 +1,8 @@
+
+#sem-background {
+  background-image: none;
+}
+
 .modal-content {
   color: black;
 }

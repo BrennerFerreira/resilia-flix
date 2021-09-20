@@ -27,6 +27,40 @@ body {
   padding-bottom: 0;
 }
 
+.navbar-brand:hover{
+  color:blueviolet !important;
+} 
+
+.nav-link {
+  color:black !important;
+}
+
+main {
+  display: flex;
+  align-items: center;
+/* mobile
+flex-direction: column; */
+}
+
+#carrossel-filmes {
+  width: 400px !important;
+height: 410px !important;
+}
+.carousel-inner{
+width: 75%;
+margin: 0 auto;
+}
+.carousel-item {
+  width:100%;
+  height: 100%;
+}
+
+.carousel-item > div,
+.carousel-item > div > img {
+width: 100%!important;
+height: 100%;
+margin: 0 auto;
+}
 
 /* .navbar-brand {
   font-family: "Bebas Neue", cursive;
@@ -49,15 +83,14 @@ body {
 #div-externa {
   min-height: 100vh;
   width: 100vw;
-  background-color: black;
-  background-image: url("../imagens/cinema1.jpg");
+  background: black url("../imagens/cinema1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-#sem-background {
-  background-image: none;
+.sem-background {
+  background: black !important;
 }
 
 .btn {
@@ -68,7 +101,9 @@ body {
 
 #footer {
   background-color: rgb(225, 207, 242);
-  font-family: "Varela Round", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  color: blueviolet;
+  font-size:20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +113,8 @@ body {
 
 #footer a {
   margin-left: 8px;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  color: blueviolet;
 }
 
 
@@ -94,3 +130,10 @@ body {
 .logado {
   color: black;
 }
+
+/* @media (max-width:) {
+  
+  main {
+  flex-direction: column;
+  }
+} */

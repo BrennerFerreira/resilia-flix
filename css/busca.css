@@ -16,3 +16,8 @@
   max-width: 300px;
   height: auto;
 }
+.btn{
+  background-color: blueviolet !important;
+  color: white !important;
+  border: none !important;
+}

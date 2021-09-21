@@ -38,18 +38,18 @@ body {
 main {
   display: flex;
   align-items: center;
-/* mobile
-flex-direction: column; */
 }
 
 #carrossel-filmes {
   width: 400px !important;
-height: 410px !important;
+  /* height: 410px !important; */
 }
+
 .carousel-inner{
 width: 75%;
 margin: 0 auto;
 }
+
 .carousel-item {
   width:100%;
   height: 100%;
@@ -83,7 +83,7 @@ margin: 0 auto;
 #div-externa {
   min-height: 100vh;
   width: 100vw;
-  background: black url("../imagens/cinema1.jpg");
+  background: black url("../imagens/cinema6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -102,7 +102,7 @@ margin: 0 auto;
 #footer {
   background-color: rgb(225, 207, 242);
   font-family: "Bebas Neue", cursive;
-  color: blueviolet;
+  color: blueviolet !important;
   font-size:20px;
   display: flex;
   align-items: center;
@@ -131,9 +131,9 @@ margin: 0 auto;
   color: black;
 }
 
-/* @media (max-width:) {
-  
+@media (max-width: 769px) {
+
   main {
-  flex-direction: column;
+    flex-direction: column;
   }
-} */
+}

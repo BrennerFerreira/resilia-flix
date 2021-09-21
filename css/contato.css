@@ -1,3 +1,11 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .nomePerfil {
   position: relative;
   display: flex;
@@ -7,16 +15,29 @@
 }
 
 .boxpicture {
+  display: flex;
+  flex-direction:row ;
   width: 70%;
   height: 70%;
 }
 
-.redesSociais {
+.redesSociais a {
   text-align: justify;
+  color: white !important;
+
 }
 .grupo4 {
   display: flex;
   align-items: center;
   position: center;
   justify-content: space-evenly;
+}
+
+
+
+@media (max-width: 769px) {
+
+  main {
+    flex-direction: column;
+  }
 }

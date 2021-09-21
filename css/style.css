@@ -90,8 +90,12 @@ margin: 0 auto;
 }
 
 .sem-background {
-  background: black !important;
+  background: url("../imagens/background-gif.gif") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 
 .btn {
   background-color: blueviolet;

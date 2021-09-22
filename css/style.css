@@ -1,16 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela+Round&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *,
 *::after,
 *::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: black;
-  color: white;
 }
 
 .navbar {
@@ -32,12 +29,43 @@ body {
 } 
 
 .nav-link {
-  color:black !important;
+  color: rgb(101, 93, 109);
+  font-weight: bold;
 }
 
 main {
   display: flex;
   align-items: center;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold, 400;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+#div-externa {
+  min-height: 100vh;
+  width: 100vw;
+  background: black url("../imagens/cinema2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sem-background {
+  background: url("../imagens/cinema1.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #carrossel-filmes {
@@ -62,45 +90,23 @@ height: 100%;
 margin: 0 auto;
 }
 
-/* .navbar-brand {
-  font-family: "Bebas Neue", cursive;
-  font-size: 35px;
-  text-shadow: 2px 4px rgb(0 0 0 / 15%);
-  padding-top: 0;
-  padding-bottom: 0;
-} */
-
-/* #logo {
-  font-family: "Bebas Neue", cursive;
-  text-transform: uppercase;
-  font-weight: bolder;
-  color: blueviolet; */
-
-.container {
-  font-family: "Varela Round", sans-serif;
-}
-
-#div-externa {
-  min-height: 100vh;
-  width: 100vw;
-  background: black url("../imagens/cinema6.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.sem-background {
-  background: url("../imagens/background-gif.gif") !important;
-  background-size: cover !important;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-
 .btn {
   background-color: blueviolet;
   color: white;
   border: none;
+}
+
+#botao-login {
+  background-color: blueviolet;
+}
+
+
+.img-filme:hover {
+  cursor: pointer;
+}
+
+.logado {
+  color: black;
 }
 
 #footer {
@@ -119,20 +125,6 @@ margin: 0 auto;
   margin-left: 8px;
   font-family: "Bebas Neue", cursive;
   color: blueviolet;
-}
-
-
-#botao-login {
-  background-color: blueviolet;
-}
-
-
-.img-filme:hover {
-  cursor: pointer;
-}
-
-.logado {
-  color: black;
 }
 
 @media (max-width: 769px) {

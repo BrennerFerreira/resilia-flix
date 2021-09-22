@@ -6,6 +6,27 @@
   box-sizing: border-box;
 }
 
+main {
+  margin:auto;
+}
+
+.perfil >p {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.container {
+  text-transform: uppercase;
+}
+
 .nomePerfil {
   position: relative;
   display: flex;
@@ -24,6 +45,7 @@
 .redesSociais a {
   text-align: justify;
   color: white !important;
+  text-transform: none;
 
 }
 .grupo4 {
@@ -33,11 +55,25 @@
   justify-content: space-evenly;
 }
 
-
+#footer {
+    position:absolute;
+    bottom:0;
+}
 
 @media (max-width: 769px) {
 
   main {
     flex-direction: column;
+    height: auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  #footer {
+    position:initial;
   }
 }

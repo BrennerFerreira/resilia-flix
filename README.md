@@ -25,7 +25,8 @@ Para rodas o projeto online, acesse o [GitHub Pages do repositório](https://bre
 Para rodar o projeto localmente:
 
 - Faça o clone deste repositório.
-- Abra o arquivo [index.html](./index.html) ou um arquivo da página [html](./html);
+- Abra o arquivo [index.html](./index.html) ou um arquivo da página [html](./html)
+em seu navegador.
 
 ## Organização de pastas
 
@@ -39,4 +40,4 @@ com cada página tendo seus [models](./js/models), [views](./js/views) e
 - HTML para a estrutura básica das páginas.
 - Bootstrap para a estilização geral das páginas.
 - CSS para estilizações específicas.
-- Javascript para as funcionalidades interativas.
+- Javascript para as funcionalidades interativas, utilizando a biblioteca jQuery.

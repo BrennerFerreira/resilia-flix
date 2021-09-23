@@ -106,7 +106,8 @@ margin: 0 auto;
 }
 
 .logado {
-  color: black;
+  color: rgb(101, 93, 109);
+  font-weight: bold;
 }
 
 #footer {
